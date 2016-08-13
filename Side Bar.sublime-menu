@@ -1,0 +1,24 @@
+[
+  {"caption":"-", "id":"sidebar-batchexec-separator"},
+  {
+    "caption": "BatchExec",
+    "id": "sidebar-batchexec",
+    "children":
+    [
+      {
+        "caption": "File",
+        "command": "start_batch_exec",
+        "args" : {
+          "mode" : "file"
+        }
+      },
+      {
+        "caption": "Directory",
+        "command": "start_batch_exec",
+        "args" : {
+          "mode" : "directory"
+        }
+       }
+    ]
+  }
+]
