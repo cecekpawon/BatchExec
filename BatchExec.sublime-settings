@@ -1,0 +1,18 @@
+{
+  "prog": "cmd",
+  "path":
+  {
+    "cmd":
+    {
+      "name": "cmd",
+      "args": "/k",
+      "inline": "&"
+    },
+    "ps":
+    {
+      "name": "powershell",
+      "args": "-noexit",
+      "inline": ";"
+    }
+  }
+}
