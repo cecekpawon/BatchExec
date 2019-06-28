@@ -7,18 +7,70 @@
     [
       {
         "caption": "File",
-        "command": "start_batch_exec",
+        "command": "batch_exec",
         "args" : {
-          "mode" : "file"
+          "mode" : "file",
+          "paths": [],
+          "dirs": []
         }
       },
       {
         "caption": "Directory",
-        "command": "start_batch_exec",
+        "command": "batch_exec",
         "args" : {
-          "mode" : "directory"
+          "mode" : "directory",
+          "paths": [],
+          "dirs": []
         }
-       }
+      },
+      {
+        "caption": "Svn",
+        "children":
+        [
+          {
+            "caption": "Update",
+            "command": "batch_exec",
+            "args" : {
+              "mode" : "svn",
+              "cmd" : "up",
+              "dirs": []
+            }
+          },
+          {
+            "caption": "Url",
+            "command": "batch_exec_url",
+            "args" : {
+              "mode" : "svn",
+              "cmd" : "info --show-item=url",
+              "dirs": []
+            }
+          }
+        ]
+      },
+      {
+        "caption": "Git",
+        "children":
+        [
+          {
+            "caption": "Pull",
+            "command": "batch_exec",
+            "args" : {
+              "mode" : "git",
+              "cmd" : "pull",
+              "dirs": []
+            }
+          },
+          {
+            "caption": "Url",
+            "command": "batch_exec_url",
+            "args" : {
+              "mode" : "git",
+              "cmd" : "remote get-url origin",
+              "dirs": []
+            }
+          }
+        ]
+      }
     ]
   }
 ]

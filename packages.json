@@ -5,7 +5,7 @@
       "name": "BatchExec",
       "description": "Exec batch file",
       "author": "cecekpawon",
-      "homepage": "https://blog.thrsh.net",
+      "homepage": "https://cecekpawon.github.io",
       "labels": ["cmd"],
       "readme": "https://raw.githubusercontent.com/cecekpawon/BatchExec/master/README.md",
       "releases" : [

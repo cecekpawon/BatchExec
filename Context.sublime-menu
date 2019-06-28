@@ -7,18 +7,22 @@
     [
       {
         "caption": "File",
-        "command": "start_batch_exec",
+        "command": "batch_exec",
         "args" : {
-          "mode" : "file"
+          "mode" : "file",
+          "paths": [],
+          "dirs": []
         }
       },
       {
         "caption": "Directory",
-        "command": "start_batch_exec",
+        "command": "batch_exec",
         "args" : {
-          "mode" : "directory"
+          "mode" : "directory",
+          "paths": [],
+          "dirs": []
         }
-       }
+      }
     ]
   }
 ]

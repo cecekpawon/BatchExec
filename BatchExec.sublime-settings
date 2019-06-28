@@ -13,6 +13,12 @@
       "name": "powershell",
       "args": "-noexit",
       "inline": ";"
+    },
+    "tm":
+    {
+      "name": "terminal",
+      "args": "",
+      "inline": "&&"
     }
   }
 }

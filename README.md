@@ -1,6 +1,6 @@
 # BatchExec plugin for Sublime Text
 
-Exec batch (`bat`, `cmd`) file.
+Exec ba(tch|sh) (`bat`, `cmd`, `sh`, `command`) file, directory, (`svn`, `git`).
 
 # How to install ?
 
