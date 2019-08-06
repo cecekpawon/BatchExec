@@ -79,6 +79,7 @@ class BatchExecUrlCommand(sublime_plugin.WindowCommand):
   def fix_url(self, Url):
     if Url:
       if (gMode == "svn"):
+        Url = re.sub(r"(github.com/.*?)(/branches/+)", r"\1/tree/", Url, re.IGNORECASE)  # svn co
         Url = Url.replace("svn.code.", "") # sourceforge
 
       elif (gMode == "git"):
