@@ -44,10 +44,11 @@ def glob_enabled(**Args):
   Result = ((platform.system() == "Windows") or (platform.system() == "Darwin"))
   if Result:
     glob_args(**Args)
+
   return Result
 
 def glob_repo_is_valid():
-  return (
+  return bool(
       gCmd
       and gDir
       and (
@@ -74,7 +75,7 @@ def glob_get_command():
 class BatchExecUrlCommand(sublime_plugin.WindowCommand):
 
   def is_enabled(self, **Args):
-    return glob_enabled(**Args) and (glob_repo_is_valid() != 0)
+    return (glob_enabled(**Args) and glob_repo_is_valid())
 
   def fix_url(self, Url):
     if Url:
@@ -143,7 +144,7 @@ class BatchExecCommand(sublime_plugin.WindowCommand):
             if not Ext in ["sh", "command"]:
               gFileName = ""
 
-    elif (gDir and (glob_repo_is_valid() != 0)):
+    elif (gDir and glob_repo_is_valid()):
       glob_get_command()
       gFileName = gDir[0]
 
@@ -190,7 +191,7 @@ class BatchExecCommand(sublime_plugin.WindowCommand):
           tell application "Terminal"
             reopen
             activate
-            --delay 1
+            delay 3
             tell application "System Events"
               keystroke "t" using command down
             end tell
