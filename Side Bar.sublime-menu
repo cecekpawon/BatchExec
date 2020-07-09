@@ -28,11 +28,20 @@
         "children":
         [
           {
-            "caption": "Update",
+            "caption": "Up",
             "command": "batch_exec",
             "args" : {
               "mode" : "svn",
               "cmd" : "up",
+              "dirs": []
+            }
+          },
+          {
+            "caption": "Diff",
+            "command": "batch_exec",
+            "args" : {
+              "mode" : "svn",
+              "cmd" : "diff",
               "dirs": []
             }
           },
@@ -57,6 +66,24 @@
             "args" : {
               "mode" : "git",
               "cmd" : "pull",
+              "dirs": []
+            }
+          },
+          {
+            "caption": "Submodule",
+            "command": "batch_exec",
+            "args" : {
+              "mode" : "git",
+              "cmd" : "submodule update",
+              "dirs": []
+            }
+          },
+          {
+            "caption": "Diff",
+            "command": "batch_exec",
+            "args" : {
+              "mode" : "git",
+              "cmd" : "diff",
               "dirs": []
             }
           },
